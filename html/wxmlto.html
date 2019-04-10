@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>小程序代码wxml和html的转化</title>
+    <meta name="keywords" content="小程序代码wxml和html的转化,wxss和css转化,rem和rpx转化,px和rpx转化,在线工具,小程序">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+    
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link href="../layui/css/layui.mobile.css" rel="stylesheet">
+   
+    <style>
+   		.topBtn{text-align: left;}
+   		.active{background: rgb(139,174,125);}
+    	.article{overflow:hidden;width: 96%;margin-left: 30px;}
+    	.change-infor,.user-infor{font-size: 14px;color: #999;margin: 10px 0;}
+    	.change-infor{color: red;}
+    	.layui-textarea{display: inline-block;width: 100%;min-height: 700px;min-width: 500px;border-radius: 0;resize: none;overflow-y: auto;outline: none;position: relative;font-size: 12px;padding-top: 20px;}
+    	.change-result{border:1px solid #ccc;}
+    	.article-left,.article-right{display: inline-block;float: left;margin-right: 10px;}
+    	.layui-input-block {margin-left: 0px; min-height: 36px;}
+        .money-wapper{width: 80%;display: inline-block;margin: 6px auto;padding: 10px;/*border: 1px solid #999;*/text-align: center;}
+        .moneyT{display: inline-block;height: 160px;margin: 0;writing-mode: vertical-lr;}
+        .money{width: 160px;}
+        .red{color: red;}
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <!-- <nav class="nav_article clear">
+            <a class="return_page" href="javascript:;"><i class="layui-icon">&#xe65c;</i></a>
+            <a class="share_button" style="float: right;" href="javascript:;"><i class="layui-icon">&#xe641;</i></a>
+        </nav> -->
+        <article class="article">
+            <p class="user-infor">使用规则：若是html直接复制body下的所有标签就好（不包括body），若是小程序直接复制WXML内所有标签<a class="red" href="./webPxTo.html">(对转换计算有疑问？)</a></p>
+          
+        	<div class="topBtn">
+        		<button class="layui-btn layui-btn-primary toBtn active" id="htmlToWxml">html转化为WXML</button>
+        		<button class="layui-btn layui-btn-primary toBtn" id="wxmlToHtml">WXML转化为html</button>
+                <button class="layui-btn layui-btn-primary toBtn" id="wxssToCss">wxss转化为css</button>
+                <button class="layui-btn layui-btn-primary toBtn" id="cssToWxss">css转化为Wxss</button>
+                <button class="layui-btn layui-btn-primary toBtn" id="pxToRem">px批量替换成rem</button>
+        		<!-- <button type="reset" class="layui-btn layui-btn-primary">重置</button> -->
+        	</div>
+            <p class="change-infor"></p>
+        	<div class="article-left layui-col-xs12 layui-col-sm5 layui-col-md5">
+        		<form class="layui-form" action="">
+	    			<div class="layui-form-item layui-form-text">
+					    <div class="layui-input-block ">
+					      <textarea name="desc" class="layui-textarea inputText"></textarea>
+					    </div>
+				  	</div>
+	    		</form>
+        	</div>
+        	<div class="article-right layui-col-xs12 layui-col-sm5 layui-col-md5">
+        		<textarea name="desc" class="layui-textarea change-result" ></textarea>
+        	</div>
+        </article>
+        <!-- 分享 -->
+        <!-- <div id="nativeShare"></div> -->
+    </div>
+</body>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script> -->
+    <script src="../js/jquery.min.js?v=2.1.4"></script>
+   	<script src="../layui/layui.all.js"></script>
+    <script src="../js/wxmlto.js"></script>
+</html>
